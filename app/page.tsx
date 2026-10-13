@@ -5,19 +5,22 @@ import { About } from "@/components/About";
 import { Info } from "@/components/Info";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { getCatalog } from "@/lib/api";
 
-export default function Home() {
+export default async function Home() {
+  const { products, site } = await getCatalog();
+
   return (
     <>
-      <Navbar />
+      <Navbar site={site} />
       <main className="flex-1">
-        <Hero />
-        <Catalog />
-        <About />
-        <Info />
+        <Hero site={site} />
+        <Catalog products={products} site={site} />
+        <About site={site} />
+        <Info site={site} />
       </main>
-      <Footer />
-      <WhatsAppFloat />
+      <Footer site={site} />
+      <WhatsAppFloat site={site} />
     </>
   );
 }

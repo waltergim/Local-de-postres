@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { site } from "@/lib/site";
 import { generalWhatsAppLink } from "@/lib/whatsapp";
+import type { SiteData } from "@/lib/types";
 import { ArrowRightIcon, WhatsAppIcon } from "@/components/icons";
 
-export function Hero() {
+export function Hero({ site }: { site: SiteData }) {
   return (
     <section id="inicio">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1.1fr_0.9fr]">
@@ -27,7 +27,7 @@ export function Hero() {
               <ArrowRightIcon className="h-4 w-4" />
             </a>
             <a
-              href={generalWhatsAppLink}
+              href={generalWhatsAppLink(site)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3.5 text-base font-medium text-ink transition hover:border-ink/30"

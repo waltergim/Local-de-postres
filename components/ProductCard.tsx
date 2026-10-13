@@ -1,9 +1,15 @@
 import Image from "next/image";
 import { formatPrice, productWhatsAppLink } from "@/lib/whatsapp";
-import type { Product } from "@/lib/products";
+import type { Product, SiteData } from "@/lib/types";
 import { SparkleIcon, WhatsAppIcon } from "@/components/icons";
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({
+  product,
+  site,
+}: {
+  product: Product;
+  site: SiteData;
+}) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-ink/20">
       <div className="relative aspect-[4/3] overflow-hidden bg-paper">
@@ -37,7 +43,7 @@ export function ProductCard({ product }: { product: Product }) {
         </span>
 
         <a
-          href={productWhatsAppLink(product)}
+          href={productWhatsAppLink(product, site)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-3 text-base font-medium text-ink transition hover:bg-ink hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"

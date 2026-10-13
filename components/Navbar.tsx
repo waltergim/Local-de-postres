@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { site } from "@/lib/site";
 import { generalWhatsAppLink } from "@/lib/whatsapp";
+import type { SiteData } from "@/lib/types";
 import { WhatsAppIcon } from "@/components/icons";
 
 const links = [
@@ -9,7 +9,7 @@ const links = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-export function Navbar() {
+export function Navbar({ site }: { site: SiteData }) {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
@@ -43,7 +43,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href={generalWhatsAppLink}
+          href={generalWhatsAppLink(site)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-base font-medium text-paper transition hover:bg-ink-soft"

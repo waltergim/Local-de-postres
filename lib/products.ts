@@ -1,16 +1,6 @@
-export type Product = {
-  id: string;
-  name: string;
-  price: number;
-  category: string;
-  description?: string;
-  image?: string;
-};
+import type { Category, Product } from "@/lib/types";
 
-export type Category = {
-  id: string;
-  name: string;
-};
+export type { Category, Product };
 
 export const categories: Category[] = [
   { id: "clasicos", name: "Postres Clásicos" },

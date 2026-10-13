@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // App separada del backend (se despliega como su propio proyecto)
+    "backend/**",
   ]),
 ]);
 

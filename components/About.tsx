@@ -1,4 +1,4 @@
-import { site } from "@/lib/site";
+import type { SiteData } from "@/lib/types";
 
 const features = [
   {
@@ -15,7 +15,7 @@ const features = [
   },
 ];
 
-export function About() {
+export function About({ site }: { site: SiteData }) {
   return (
     <section
       id="nosotros"

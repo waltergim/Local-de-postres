@@ -1,4 +1,6 @@
-export const site = {
+import type { SiteData } from "@/lib/types";
+
+export const site: SiteData = {
   name: "Cucharita Dulce Bajonera",
   shortName: "Cucharita Dulce",
   tagline: "Postres caseros, hechos con amor",
@@ -16,4 +18,4 @@ export const site = {
   instagram: "https://instagram.com/",
   facebook: "",
   email: "",
-} as const;
+};

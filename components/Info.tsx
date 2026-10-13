@@ -1,5 +1,5 @@
-import { site } from "@/lib/site";
 import { generalWhatsAppLink } from "@/lib/whatsapp";
+import type { SiteData } from "@/lib/types";
 import {
   ClockIcon,
   FacebookIcon,
@@ -9,7 +9,7 @@ import {
   WhatsAppIcon,
 } from "@/components/icons";
 
-export function Info() {
+export function Info({ site }: { site: SiteData }) {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     site.address,
   )}&output=embed`;
@@ -58,7 +58,7 @@ export function Info() {
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
-                  href={generalWhatsAppLink}
+                  href={generalWhatsAppLink(site)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-base font-medium text-paper transition hover:bg-ink-soft"

@@ -1,11 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { categories, products } from "@/lib/products";
+import { categories } from "@/lib/products";
+import type { Product, SiteData } from "@/lib/types";
 import { ProductCard } from "@/components/ProductCard";
 import { SearchIcon } from "@/components/icons";
 
-export function Catalog() {
+export function Catalog({
+  products,
+  site,
+}: {
+  products: Product[];
+  site: SiteData;
+}) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState<string>("all");
 
@@ -16,7 +23,7 @@ export function Catalog() {
       const matchesQuery = q === "" || p.name.toLowerCase().includes(q);
       return matchesCategory && matchesQuery;
     });
-  }, [query, active]);
+  }, [products, query, active]);
 
   return (
     <section
@@ -69,7 +76,7 @@ export function Catalog() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((p) => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard key={p.id} product={p} site={site} />
           ))}
         </div>
 
