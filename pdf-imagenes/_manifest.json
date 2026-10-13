@@ -1,0 +1,310 @@
+[
+  {
+    "file": "p1_banner_xref14_1638x921.jpeg",
+    "page": 1,
+    "xref": 14,
+    "w": 1638,
+    "h": 921,
+    "kind": "banner",
+    "bbox": [
+      12,
+      9,
+      601,
+      341
+    ]
+  },
+  {
+    "file": "p1_banner_xref17_1629x916.jpeg",
+    "page": 1,
+    "xref": 17,
+    "w": 1629,
+    "h": 916,
+    "kind": "banner",
+    "bbox": [
+      13,
+      416,
+      600,
+      746
+    ]
+  },
+  {
+    "file": "p1_foto_xref18_322x240.jpeg",
+    "page": 1,
+    "xref": 18,
+    "w": 322,
+    "h": 240,
+    "kind": "foto",
+    "bbox": [
+      179,
+      345,
+      295,
+      431
+    ]
+  },
+  {
+    "file": "p1_foto_xref19_334x242.jpeg",
+    "page": 1,
+    "xref": 19,
+    "w": 334,
+    "h": 242,
+    "kind": "foto",
+    "bbox": [
+      480,
+      367,
+      600,
+      454
+    ]
+  },
+  {
+    "file": "p1_foto_xref20_360x240.jpeg",
+    "page": 1,
+    "xref": 20,
+    "w": 360,
+    "h": 240,
+    "kind": "foto",
+    "bbox": [
+      324,
+      353,
+      454,
+      440
+    ]
+  },
+  {
+    "file": "p1_foto_xref22_307x355.png",
+    "page": 1,
+    "xref": 22,
+    "w": 307,
+    "h": 355,
+    "kind": "foto",
+    "bbox": [
+      475,
+      701,
+      585,
+      829
+    ]
+  },
+  {
+    "file": "p1_foto_xref25_461x334.png",
+    "page": 1,
+    "xref": 25,
+    "w": 461,
+    "h": 334,
+    "kind": "foto",
+    "bbox": [
+      186,
+      705,
+      352,
+      826
+    ]
+  },
+  {
+    "file": "p2_banner_xref39_1638x921.jpeg",
+    "page": 2,
+    "xref": 39,
+    "w": 1638,
+    "h": 921,
+    "kind": "banner",
+    "bbox": [
+      12,
+      9,
+      601,
+      341
+    ]
+  },
+  {
+    "file": "p2_foto_xref41_226x160.png",
+    "page": 2,
+    "xref": 41,
+    "w": 226,
+    "h": 160,
+    "kind": "foto",
+    "bbox": [
+      394,
+      315,
+      475,
+      373
+    ]
+  },
+  {
+    "file": "p2_foto_xref43_223x160.jpeg",
+    "page": 2,
+    "xref": 43,
+    "w": 223,
+    "h": 160,
+    "kind": "foto",
+    "bbox": [
+      292,
+      316,
+      372,
+      374
+    ]
+  },
+  {
+    "file": "p2_foto_xref44_246x158.jpeg",
+    "page": 2,
+    "xref": 44,
+    "w": 246,
+    "h": 158,
+    "kind": "foto",
+    "bbox": [
+      492,
+      318,
+      581,
+      375
+    ]
+  },
+  {
+    "file": "p2_banner_xref45_1638x921.jpeg",
+    "page": 2,
+    "xref": 45,
+    "w": 1638,
+    "h": 921,
+    "kind": "banner",
+    "bbox": [
+      12,
+      511,
+      601,
+      843
+    ]
+  },
+  {
+    "file": "p2_foto_xref55_356x534.jpeg",
+    "page": 2,
+    "xref": 55,
+    "w": 356,
+    "h": 534,
+    "kind": "foto",
+    "bbox": [
+      24,
+      510,
+      153,
+      703
+    ]
+  },
+  {
+    "file": "p2_banner_xref57_1075x311.jpeg",
+    "page": 2,
+    "xref": 57,
+    "w": 1075,
+    "h": 311,
+    "kind": "banner",
+    "bbox": [
+      113,
+      392,
+      500,
+      505
+    ]
+  },
+  {
+    "file": "p3_banner_xref63_1638x921.jpeg",
+    "page": 3,
+    "xref": 63,
+    "w": 1638,
+    "h": 921,
+    "kind": "banner",
+    "bbox": [
+      12,
+      520,
+      601,
+      852
+    ]
+  },
+  {
+    "file": "p3_banner_xref64_1663x935.jpeg",
+    "page": 3,
+    "xref": 64,
+    "w": 1663,
+    "h": 935,
+    "kind": "banner",
+    "bbox": [
+      7,
+      9,
+      606,
+      346
+    ]
+  },
+  {
+    "file": "p3_foto_xref66_344x384.png",
+    "page": 3,
+    "xref": 66,
+    "w": 344,
+    "h": 384,
+    "kind": "foto",
+    "bbox": [
+      83,
+      576,
+      207,
+      714
+    ]
+  },
+  {
+    "file": "p3_foto_xref69_270x356.png",
+    "page": 3,
+    "xref": 69,
+    "w": 270,
+    "h": 356,
+    "kind": "foto",
+    "bbox": [
+      226,
+      576,
+      328,
+      711
+    ]
+  },
+  {
+    "file": "p3_foto_xref71_322x240.jpeg",
+    "page": 3,
+    "xref": 71,
+    "w": 322,
+    "h": 240,
+    "kind": "foto",
+    "bbox": [
+      429,
+      583,
+      545,
+      670
+    ]
+  },
+  {
+    "file": "p3_banner_xref72_1075x311.jpeg",
+    "page": 3,
+    "xref": 72,
+    "w": 1075,
+    "h": 311,
+    "kind": "banner",
+    "bbox": [
+      113,
+      392,
+      500,
+      505
+    ]
+  },
+  {
+    "file": "p4_banner_xref78_1638x921.jpeg",
+    "page": 4,
+    "xref": 78,
+    "w": 1638,
+    "h": 921,
+    "kind": "banner",
+    "bbox": [
+      12,
+      512,
+      601,
+      844
+    ]
+  },
+  {
+    "file": "p4_banner_xref79_1600x1131.jpeg",
+    "page": 4,
+    "xref": 79,
+    "w": 1600,
+    "h": 1131,
+    "kind": "banner",
+    "bbox": [
+      6,
+      1,
+      607,
+      425
+    ]
+  }
+]

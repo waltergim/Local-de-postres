@@ -1,0 +1,153 @@
+export type Product = {
+  id: string;
+  name: string;
+  price: number;
+  category: string;
+  description?: string;
+  image?: string;
+};
+
+export type Category = {
+  id: string;
+  name: string;
+};
+
+export const categories: Category[] = [
+  { id: "clasicos", name: "Postres Clásicos" },
+  { id: "bocados", name: "Bocados Dulces" },
+  { id: "batidos", name: "Batidos y Gelatinas" },
+  { id: "frutas", name: "Frutas y Cremas" },
+  { id: "promos", name: "Promos para Compartir" },
+];
+
+export const products: Product[] = [
+  {
+    id: "chocotorta",
+    name: "ChocoTorta",
+    price: 5000,
+    category: "clasicos",
+    image: "/productos/chocotorta.jpeg",
+  },
+  {
+    id: "bomba-oreo",
+    name: "Bomba Oreo",
+    price: 4200,
+    category: "clasicos",
+    image: "/productos/bomba-oreo.jpeg",
+  },
+  {
+    id: "mini-oreo-golosa",
+    name: "Postre Mini Oreo Golosa",
+    price: 5000,
+    category: "clasicos",
+    image: "/productos/mini-oreo-golosa.jpeg",
+  },
+  {
+    id: "bomba-rocklets",
+    name: "Postre Bomba Rocklets",
+    price: 4500,
+    category: "clasicos",
+    image: "/productos/bomba-rocklets.png",
+  },
+  {
+    id: "mix-chocotorta-bomba-oreo",
+    name: "Mix de chocotorta y bomba Oreo",
+    price: 5500,
+    category: "clasicos",
+    image: "/productos/mix-chocotorta-bomba-oreo.png",
+  },
+  {
+    id: "tarteleta-bombon",
+    name: "Tarteleta Bombón",
+    price: 4000,
+    category: "bocados",
+    image: "/productos/tarteleta-bombon.jpeg",
+  },
+  {
+    id: "bocadito-dulce-de-leche",
+    name: "Bocadito Dulce de Leche",
+    price: 3500,
+    category: "bocados",
+    image: "/productos/bocadito-dulce-de-leche.png",
+  },
+  {
+    id: "trufas-de-chocolate",
+    name: "Trufas de chocolate",
+    price: 3500,
+    category: "bocados",
+    image: "/productos/trufas-de-chocolate.jpeg",
+  },
+  {
+    id: "batido-banana-frutos-rojos",
+    name: "Batido de Banana con Frutos Rojos",
+    price: 4500,
+    category: "batidos",
+    image: "/productos/batido-banana-frutos-rojos.jpeg",
+  },
+  {
+    id: "batido-banana-frutilla",
+    name: "Batido de Banana con Frutilla",
+    price: 4500,
+    category: "batidos",
+    image: "/productos/batido-banana-frutilla.jpg",
+  },
+  {
+    id: "gelatina-frambuesa",
+    name: "Gelatina Frambuesa",
+    price: 1500,
+    category: "batidos",
+    image: "/productos/gelatina-frambuesa.jpeg",
+  },
+  {
+    id: "gelatina-cereza",
+    name: "Gelatina Cereza",
+    price: 1500,
+    category: "batidos",
+    image: "/productos/gelatina-cereza.jpeg",
+  },
+  {
+    id: "frutilla-con-crema",
+    name: "Frutilla con crema",
+    price: 4500,
+    category: "frutas",
+    image: "/productos/promo-frutilla-con-crema.png",
+  },
+  {
+    id: "ensalada-de-frutas",
+    name: "Ensaladas de Frutas",
+    price: 3500,
+    category: "frutas",
+    image: "/productos/promo-ensalada-de-frutas.png",
+  },
+  {
+    id: "durazno-con-crema",
+    name: "Durazno con crema",
+    price: 4500,
+    category: "frutas",
+    image: "/productos/durazno-con-crema.jpg",
+  },
+  {
+    id: "promo-frutilla-con-crema",
+    name: "Frutilla con crema",
+    price: 7200,
+    category: "promos",
+    description: "2x1: llevá dos y pagá uno",
+    image: "/productos/promo-frutilla-con-crema.png",
+  },
+  {
+    id: "promo-ensalada-de-frutas",
+    name: "Ensaladas de Frutas",
+    price: 7000,
+    category: "promos",
+    description: "2x1: llevá dos y pagá uno",
+    image: "/productos/promo-ensalada-de-frutas.png",
+  },
+  {
+    id: "promo-mix-chocotorta-bomba-oreo",
+    name: "Mix de chocotorta y bomba Oreo",
+    price: 10000,
+    category: "promos",
+    description: "Porción grande para compartir",
+    image: "/productos/promo-mix-chocotorta-bomba-oreo.jpeg",
+  },
+];
