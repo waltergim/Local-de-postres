@@ -1,10 +1,9 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { getDb } from "@/lib/db";
 import { siteConfig } from "@/lib/db/schema";
 import { requireAdmin } from "@/lib/dal";
-import { triggerSiteRevalidate } from "@/lib/revalidate";
 import { siteSchema } from "@/lib/validation";
 
 export type SiteFormState = {
@@ -56,7 +55,7 @@ export async function updateSite(
       set: { ...values, updatedAt: new Date() },
     });
 
-  await triggerSiteRevalidate();
+  revalidateTag("catalog", { expire: 0 });
   revalidatePath("/admin/site");
   return { success: true };
 }

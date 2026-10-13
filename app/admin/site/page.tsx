@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { connection } from "next/server";
 import { getSite } from "@/lib/queries";
 import { SiteForm } from "./SiteForm";
 
 export const instant = false;
 
 export default async function SitePage() {
+  await connection();
   const site = await getSite();
 
   return (

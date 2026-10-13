@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { connection } from "next/server";
 import { listProducts } from "@/lib/queries";
 import { categoryName } from "@/lib/constants";
 import { formatPrice } from "@/lib/money";
@@ -8,6 +9,7 @@ import { DeleteProductButton } from "./_components/DeleteProductButton";
 export const instant = false;
 
 export default async function AdminProductsPage() {
+  await connection();
   const items = await listProducts();
 
   return (

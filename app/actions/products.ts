@@ -1,14 +1,13 @@
 "use server";
 
 import { randomUUID } from "node:crypto";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { redirect } from "next/navigation";
 import { eq } from "drizzle-orm";
 import { put } from "@vercel/blob";
 import { getDb } from "@/lib/db";
 import { products } from "@/lib/db/schema";
 import { requireAdmin } from "@/lib/dal";
-import { triggerSiteRevalidate } from "@/lib/revalidate";
 import { productSchema } from "@/lib/validation";
 
 export type ProductFormState = {
@@ -65,7 +64,7 @@ export async function createProduct(
       available: parsed.data.available,
     });
 
-  await triggerSiteRevalidate();
+  revalidateTag("catalog", { expire: 0 });
   revalidatePath("/admin");
   redirect("/admin");
 }
@@ -99,7 +98,7 @@ export async function updateProduct(
     })
     .where(eq(products.id, id));
 
-  await triggerSiteRevalidate();
+  revalidateTag("catalog", { expire: 0 });
   revalidatePath("/admin");
   redirect("/admin");
 }
@@ -110,6 +109,6 @@ export async function deleteProduct(formData: FormData): Promise<void> {
   if (id) {
     await getDb().delete(products).where(eq(products.id, id));
   }
-  await triggerSiteRevalidate();
+  revalidateTag("catalog", { expire: 0 });
   revalidatePath("/admin");
 }

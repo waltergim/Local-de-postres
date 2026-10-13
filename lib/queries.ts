@@ -1,11 +1,9 @@
 import "server-only";
-import { connection } from "next/server";
 import { asc, eq } from "drizzle-orm";
 import { getDb } from "./db";
 import { products, siteConfig, type Product, type SiteConfig } from "./db/schema";
 
 export async function listProducts(): Promise<Product[]> {
-  await connection();
   return getDb()
     .select()
     .from(products)
@@ -13,7 +11,6 @@ export async function listProducts(): Promise<Product[]> {
 }
 
 export async function getProduct(id: string): Promise<Product | undefined> {
-  await connection();
   const [row] = await getDb()
     .select()
     .from(products)
@@ -23,7 +20,6 @@ export async function getProduct(id: string): Promise<Product | undefined> {
 }
 
 export async function getSite(): Promise<SiteConfig | undefined> {
-  await connection();
   const [row] = await getDb()
     .select()
     .from(siteConfig)

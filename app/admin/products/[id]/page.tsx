@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import { getProduct } from "@/lib/queries";
 import { ProductForm } from "@/app/admin/_components/ProductForm";
 import { updateProduct } from "@/app/actions/products";
@@ -11,6 +12,7 @@ export default async function EditProductPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  await connection();
   const { id } = await params;
   const product = await getProduct(id);
 
